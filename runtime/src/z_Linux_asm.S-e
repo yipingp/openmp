@@ -172,18 +172,18 @@ KMP_PREFIX_UNDERSCORE(\proc):
         .data
         .comm .gomp_critical_user_,32
         .data
-        .globl ____kmp_unnamed_critical_addr
-____kmp_unnamed_critical_addr:
+        .globl ___kmp_unnamed_critical_addr
+___kmp_unnamed_critical_addr:
         .long .gomp_critical_user_
 #  else /* Linux* OS */
         .data
         .comm .gomp_critical_user_,32,8
         .data
 	ALIGN 4
-        .global ___kmp_unnamed_critical_addr
-___kmp_unnamed_critical_addr:
+        .global __kmp_unnamed_critical_addr
+__kmp_unnamed_critical_addr:
         .4byte .gomp_critical_user_
-        .type ___kmp_unnamed_critical_addr,@object
+        .type __kmp_unnamed_critical_addr,@object
 #  endif /* KMP_OS_DARWIN */
 # endif /* KMP_ARCH_X86 */
 
@@ -192,18 +192,18 @@ ___kmp_unnamed_critical_addr:
         .data
         .comm .gomp_critical_user_,32
         .data
-        .globl ____kmp_unnamed_critical_addr
-____kmp_unnamed_critical_addr:
+        .globl ___kmp_unnamed_critical_addr
+___kmp_unnamed_critical_addr:
         .quad .gomp_critical_user_
 #  else /* Linux* OS */
         .data
         .comm .gomp_critical_user_,32,8
         .data
 	ALIGN 8
-        .global ___kmp_unnamed_critical_addr
-___kmp_unnamed_critical_addr:
+        .global __kmp_unnamed_critical_addr
+__kmp_unnamed_critical_addr:
         .8byte .gomp_critical_user_
-        .type ___kmp_unnamed_critical_addr,@object
+        .type __kmp_unnamed_critical_addr,@object
 #  endif /* KMP_OS_DARWIN */
 # endif /* KMP_ARCH_X86_64 */
 
@@ -1733,8 +1733,8 @@ __kmp_invoke_microtask:
     .comm .gomp_critical_user_,32,8
     .data
     .align 4
-    .global ___kmp_unnamed_critical_addr
-___kmp_unnamed_critical_addr:
+    .global __kmp_unnamed_critical_addr
+__kmp_unnamed_critical_addr:
     .4byte .gomp_critical_user_
 #endif /* KMP_ARCH_ARM */
 
@@ -1743,8 +1743,8 @@ ___kmp_unnamed_critical_addr:
     .comm .gomp_critical_user_,32,8
     .data
     .align 8
-    .global ___kmp_unnamed_critical_addr
-___kmp_unnamed_critical_addr:
+    .global __kmp_unnamed_critical_addr
+__kmp_unnamed_critical_addr:
     .8byte .gomp_critical_user_
 #endif /* KMP_ARCH_PPC64 || KMP_ARCH_AARCH64 || KMP_ARCH_MIPS64 ||
           KMP_ARCH_RISCV64 */

@@ -1,3 +1,8 @@
+20210926
+support iOS
+ref: https://blog.csdn.net/qq_35841363/article/details/114106671
+
+
 ========================================
 How to Build the LLVM* OpenMP* Libraries
 ========================================
